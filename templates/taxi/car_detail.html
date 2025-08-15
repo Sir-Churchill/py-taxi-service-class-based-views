@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Brand: {{ car.manufacturer.name }}</h1>
+    <h2>Country: {{ car.manufacturer.country }}</h2>
+
+    <div class="table-responsive">
+        <h3>Drivers</h3>
+        {% for driver in car.drivers.all %}
+            <ul>
+                <li><strong>{{ driver.first_name }} {{ driver.last_name }}</strong></li>
+            </ul>
+        {% endfor %}
+    </div>
+{%  endblock %}
