@@ -6,7 +6,7 @@ from .views import (index, DriverDetailView,
 
 urlpatterns = [
     path("", index, name="index"),
-    path("manufacturer/", ManufacturerListView.as_view(),
+    path("manufacturers/", ManufacturerListView.as_view(),
          name="manufacturer-list"),
     path("drivers/<int:pk>/", DriverDetailView.as_view(),
          name="driver-detail"),
